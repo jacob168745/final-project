@@ -1,6 +1,6 @@
-# 🏆 Best Neighborhood in Pittsburgh — Final Project
+# 🏆 Best Neighborhood in Pittsburgh — CMPINF 0010 Final
 
-### Canvas Group #: 20
+### Canvas Group #20
 
 ---
 
