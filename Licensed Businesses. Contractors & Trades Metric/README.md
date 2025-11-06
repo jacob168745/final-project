@@ -1,50 +1,105 @@
-📊 Economic Stability & Services — Individual Analysis
+# 📈 Economic Stability Metric — Licensed Businesses in Pittsburgh
 
-Dataset Used:
-Licensed Businesses, Contractors & Trades — Western Pennsylvania Regional Data Center (WPRDC)
-Link: https://data.wprdc.org/dataset/licensed-businesses-contractors-trades
+### Contributor: **Chase Marsalko**
+Email: cbm58@pitt.edu
+Course: CMPINF 0010 — Best Neighborhood in Pittsburgh  
+Dataset: *Licensed Businesses, Contractors & Trades*
 
-Author: Chase Marsalko
-Sub-Metric: Economic Stability & Services
-Final Metric Name: Stability Score
+---
 
-🧠 Purpose
+## 🎯 Goal of My Sub-Metric
 
-This analysis measures how economically stable and service-supported each Pittsburgh neighborhood is.
-The logic: neighborhoods with long-standing businesses and a healthy number of them offer more reliable services and contribute to long-term community strength.
+My metric evaluates the **economic stability and service availability** in Pittsburgh neighborhoods using licensed business data from the WPRDC.
 
-This score will later be combined with group-member metrics for Parking Activity & Community Engagement to determine the Best Neighborhood in Pittsburgh.
+## 📌 Summary
 
-🔍 Method Overview
-✅ Steps Completed in Notebook
-Step	What Was Done
-1️⃣	Loaded and cleaned business license data
-2️⃣	Parsed zip codes from business address text
-3️⃣	Mapped ZIP → Neighborhood
-4️⃣	Calculated years active using license dates
-5️⃣	Removed duplicates to ensure one record per unique business
-6️⃣	Grouped by neighborhood and aggregated metrics
-7️⃣	Scored neighborhoods using a weighted Stability Score
-8️⃣	Visualized rankings using bar charts
-📐 Stability Score Formula
+Analyzing business longevity and local service density across Pittsburgh neighborhoods to assess economic stability and contribution to overall livability.
 
-For each neighborhood, we compute:
+---
 
-Component	Description	Weight
-Business Longevity	Average years active of businesses	0.60
-Business Count	Total number of active businesses	0.40
+## 📊 Dataset Used
 
-Both components are normalized (0–1 range) before weighting:
+**Licensed Businesses, Contractors & Trades — WPRDC**  
+🔗 https://data.wprdc.org/dataset/business-contractors-trades
 
-Stability Score = (0.6 × Longevity_norm) + (0.4 × BusinessCount_norm)
+---
+
+## 🧩 Sub-Metric Description — Economic Stability
+
+This sub-metric measures the strength and reliability of neighborhood economies using business licensing data from the Western Pennsylvania Regional Data Center (WPRDC).
+The goal is to identify areas with consistent business activity and long-term establishments, indicating stable local services and economic health.
+
+Metric Formula
+
+Component	What It Represents	Weight
+Average Years Active	Longevity of licensed businesses	0.6
+Business Count	Total number of licensed businesses	0.4
+Stability Score = (0.6 * Normalized Average Years Active) + 
+                  (0.4 * Normalized Business Count)
 
 
-✅ Trade diversity may also be added later if NAICS categories are merged into the dataset.
+Higher Stability Scores reflect neighborhoods with strong, long-standing, and diverse business presence.
 
-🏆 Findings (Example Preview)
+---
 
-Neighborhoods are ranked based on overall Stability Score.
-Visual output (bar chart) highlights leaders → more reliable economic environment.
+## 🧠 Why This Matters for “Best Neighborhood”
 
-Example:
-✅ Regent Square, Oakland, and Downtown scored highly due to strong longevity + service density.
+Stable neighborhoods:
+- Keep businesses open longer
+- Retain jobs locally
+- Provide consistent, essential services
+- Support long-term residential growth
+
+A neighborhood with strong business stability is **resilient and economically healthy**.
+
+---
+
+## ✅ Outputs in Notebook
+
+My analysis produces:
+- Ranking of neighborhoods by Economic Stability Score
+- Visualizations showing strongest + weakest business areas
+- A contribution to our team’s **overall PLEM score**
+
+---
+
+## 🔧 Analysis Steps
+
+1. Loaded and cleaned business, contractor, and trade license datasets.
+
+2. Extracted ZIP codes and mapped them to Pittsburgh neighborhoods.
+
+3. Parsed license issue and expiration dates to calculate years active.
+
+4. Removed duplicate entries and standardized business names.
+
+5. Aggregated data by neighborhood.
+
+6. Normalized values for average years active and business counts.
+
+7. Calculated the Stability Score for each neighborhood.
+
+8. Visualized results using bar charts to show top neighborhoods by stability.
+
+---
+
+## 📊 Results
+
+The analysis produced a ranked list of neighborhoods by economic stability.
+Top-performing neighborhoods showed:
+
+High counts of active, licensed businesses.
+
+Longer average business operation times.
+
+Strong representation across multiple trades and industries.
+
+These neighborhoods demonstrate stronger long-term economic reliability and local engagement.
+
+---
+
+## 🔍 Summary Statement
+
+> **This sub-metric helps identify neighborhoods with reliable services and strong local economies — an important part of determining Pittsburgh’s best neighborhood.**
+
+
